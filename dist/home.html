@@ -45,14 +45,69 @@
 					<p class="banner__text">Экскурсии объеденные в одном маркетплейсе от туристических компаний и гидов по всей России</p>
 					<form class="banner__form">
 						<input type="text" class="banner__input banner__city" placeholder="Город">
-						<input class="banner__input banner__calendar" id="bannerCalendar" readonly type="text" placeholder="Дата заезда">
-						<div class="banner__quantity quantity">
-							<input type="text" class="banner__input" data-max-value="15" min="1" placeholder="Кол-во человек">
-							<div class="quantity__button">
-								<!-- <button class="quantity__button_plus">+</button>
-								<button class="quantity__button_minus ">-</button> -->
+						<input type="text" class="banner__input banner__calendar" id="bannerCalendar" autocomplete="off" placeholder="Дата заезда" readonly>
+
+						<div class="banner__input people-quantiti" style="position: relative;">
+							<div data-modal-btn="guests" class=" _modal_btn">
+								<input type="text" class="people-quantiti__input" data-max-value="10" autocomplete="off" placeholder="Кол-во человек" readonly>
+							</div>
+							<div data-modal="guests" class="tourist-modal tourist-modal_bot-full ">
+								<!-- <div class="popup__close"></div> -->
+								<div class="tourist-modal__wrapper">
+									<div class="tourist-modal__header">
+										<div class="tourist-modal__close">
+											<img src="img/icons/close.svg" alt="close">
+										</div>
+										<div class="tourist-modal__named">
+											Гости
+										</div>
+									</div>
+									<div class="tourist-modal__choses">
+										<div class="tourist-modal__row _js-filter">
+											<div class="tourist-modal__column">
+												<div class="tourist-modal__title">Взрослые</div>
+												<div class="tourist-modal__subtitle">от 18 лет</div>
+											</div>
+											<div class="tourist-modal__column">
+												<div class="quantity">
+													<div class="quantity__button quantity__button_minus"></div>
+													<div class="quantity__input">
+														<input class="_js-inp _js-inp_text" data-max-value="10" readonly autocomplete="off" type="text" name="form[]" value="1">
+													</div>
+													<div class="quantity__button quantity__button_plus"></div>
+												</div>
+											</div>
+										</div>
+										<div class="tourist-modal__row _js-filter">
+											<div class="tourist-modal__column">
+												<div class="tourist-modal__title">Дети</div>
+												<div class="tourist-modal__subtitle">до 18 лет</div>
+											</div>
+											<div class="tourist-modal__column">
+												<div class="quantity">
+													<div class="quantity__button quantity__button_minus"></div>
+													<div class="quantity__input">
+														<input class="_js-inp _js-inp_text" data-max-value="10" readonly autocomplete="off" type="text" name="form[]" value="0">
+													</div>
+													<div class="quantity__button quantity__button_plus"></div>
+												</div>
+											</div>
+										</div>
+
+										<!-- <div class="tourist-modal__row tourist-modal__row_discr">
+                15 гостей максимум, не считая младенцев.
+            </div> -->
+									</div>
+
+									<div class="tourist-modal__bottom">
+										<button type="reset" class=" tourist-modal__res">
+											Сбросить
+										</button>
+									</div>
+								</div>
 							</div>
 						</div>
+
 						<button class="banner__btn">Найти</button>
 					</form>
 				</div>
@@ -104,6 +159,15 @@
 			</div>
 		</footer>
 	</div>
+
+	<!-- <div class="banner__quantity quantity">
+		<input type="text" class="banner__input" data-max-value="15" min="1" placeholder="Кол-во человек">
+		<div class="quantity__button">
+			<button class="quantity__button_plus">+</button>
+			<button class="quantity__button_minus ">-</button>
+		</div>
+	</div> -->
+
 	<script src="js/app.min.js"></script>
 </body>
 
